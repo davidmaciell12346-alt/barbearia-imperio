@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Império - Estilo, Tradição e Qualidade</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Montserrat & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#FACC15',
+                            500: '#EAB308',
+                            600: '#CA8A04',
+                            glow: '#D4AF37'
+                        },
+                        dark: {
+                            900: '#0f0f0f',
+                            800: '#18181b',
+                            700: '#27272a',
+                            600: '#3f3f46'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF5C0 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to right, #D4AF37, #8A6414) 1;
+        }
+        .bg-pattern {
+            background-color: #0f0f0f;
+            background-image: radial-gradient(#27272a 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-200 font-sans antialiased bg-pattern flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed w-full top-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-gold-600/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full border-2 border-gold-500/80 flex items-center justify-center bg-dark-800 text-gold-400 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-[#ffffff] fa-scissors text-2xl text-gold-500"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xl font-serif font-bold tracking-wider gold-gradient-text uppercase">Império</span>
+                        <span class="block text-[10px] tracking-[0.2em] text-gray-400 uppercase -mt-1">Barbearia</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#sobre" class="hover:text-gold-400 transition-colors">Sobre</a>
+                    <a href="#servicos" class="hover:text-gold-400 transition-colors">Serviços</a>
+                    <a href="#diferenciais" class="hover:text-gold-400 transition-colors">Diferenciais</a>
+                    <a href="#galeria" class="hover:text-gold-400 transition-colors">Galeria</a>
+                    <a href="#avaliacoes" class="hover:text-gold-400 transition-colors">Avaliações</a>
+                    <a href="#contato" class="hover:text-gold-400 transition-colors">Contato</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden sm:block">
+                    <a href="https://wa.me/5585999991234?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Barbearia%20Imp%C3%A9rio." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-emerald-900/20 transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Agendar Agora</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-300 hover:text-gold-400 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-dark-700 px-4 pt-2 pb-6 space-y-3">
+            <a href="#sobre" class="block py-2 text-gray-300 hover:text-gold-400 border-b border-dark-700/50">Sobre</a>
+            <a href="#servicos" class="block py-2 text-gray-300 hover:text-gold-400 border-b border-dark-700/50">Serviços</a>
+            <a href="#diferenciais" class="block py-2 text-gray-300 hover:text-gold-400 border-b border-dark-700/50">Diferenciais</a>
+            <a href="#galeria" class="block py-2 text-gray-300 hover:text-gold-400 border-b border-dark-700/50">Galeria</a>
+            <a href="#avaliacoes" class="block py-2 text-gray-300 hover:text-gold-400 border-b border-dark-700/50">Avaliações</a>
+            <a href="#contato" class="block py-2 text-gray-300 hover:text-gold-400 border-b border-dark-700/50">Contato</a>
+            <a href="https://wa.me/5585999991234?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Barbearia%20Imp%C3%A9rio." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 mt-4">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>AGENDAR PELO WHATSAPP</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden border-b border-gold-600/10">
+        <!-- Background Overlay / Image -->
+        <div class="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=1920');"></div>
+        <div class="absolute inset-0 z-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-wider uppercase">
+                        <i class="fa-solid fa-crown text-sm"></i>
+                        <span>Estilo, Tradição e Qualidade</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-6xl font-serif font-bold text-white leading-tight">
+                        Seu estilo começa <span class="gold-gradient-text italic">aqui!</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-gray-300 max-w-2xl font-light leading-relaxed">
+                        Bem-vindo à <strong class="text-white font-semibold">Barbearia Império</strong>. Mais do que um simples corte de cabelo, oferecemos uma experiência completa com ambiente confortável e atendimento de classe alta.
+                    </p>
+
+                    <!-- CTA Principal -->
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/5585999991234?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Barbearia%20Imp%C3%A9rio." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-lg font-bold px-8 py-4 rounded-xl shadow-xl shadow-emerald-950/50 hover:shadow-emerald-600/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 group">
+                            <i class="fa-brands fa-whatsapp text-2xl group-hover:scale-110 transition-transform"></i>
+                            <span>AGENDAR PELO WHATSAPP</span>
+                        </a>
+                        <a href="#servicos" class="border border-gold-500/40 hover:border-gold-400 hover:bg-gold-500/10 text-gold-400 font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <span>Ver Serviços</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Informações rápidas -->
+                    <div class="pt-8 border-t border-dark-700/60 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-400">
+                        <div class="flex items-center justify-center lg:justify-start gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-dark-800 flex items-center justify-center text-gold-400 border border-dark-700">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span class="text-left">Rua das Palmeiras, 245 - Centro</span>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-dark-800 flex items-center justify-center text-gold-400 border border-dark-700">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span>(85) 99999-1234</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gold-500/30 to-amber-700/30 blur-xl opacity-70"></div>
+                    <div class="relative bg-dark-800 border border-dark-700 rounded-2xl p-4 shadow-2xl">
+                        <div class="relative rounded-xl overflow-hidden aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=800" alt="Corte de Cabelo na Barbearia Império" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-dark-900/80 backdrop-blur-md border border-dark-700 text-center">
+                                <div class="flex items-center justify-center text-gold-400 gap-1 mb-1">
+                                    <i class="fa-solid fa-star text-sm"></i>
+                                    <i class="fa-solid fa-star text-sm"></i>
+                                    <i class="fa-solid fa-star text-sm"></i>
+                                    <i class="fa-solid fa-star text-sm"></i>
+                                    <i class="fa-solid fa-star text-sm"></i>
+                                </div>
+                                <p class="text-white font-medium text-sm">Experiência VIP & Ambiente Climatizado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS SECTION -->
+    <section id="sobre" class="py-20 bg-dark-800/50 border-b border-dark-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4">
+                <h2 class="text-xs font-semibold text-gold-400 uppercase tracking-widest">Sobre Nós</h2>
+                <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white">Muito Mais Que Um Corte de Cabelo</h3>
+                <div class="w-20 h-1 bg-gold-500 mx-auto rounded-full"></div>
+                <p class="text-gray-300 text-lg font-light leading-relaxed pt-4">
+                    Nossa equipe está pronta para cuidar do seu visual com técnicas modernas, atendimento personalizado e um ambiente confortável e climatizado. Venha relaxar enquanto renovamos sua autoestima.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS SECTION -->
+    <section id="servicos" class="py-20 border-b border-dark-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <div class="inline-flex items-center gap-2 text-gold-400 text-sm font-semibold uppercase tracking-wider">
+                    <i class="fa-solid fa-scissors"></i>
+                    <span>Especialidades</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Nossos Serviços</h2>
+                <p class="text-gray-400">Escolha o serviço ideal para o seu estilo e agende com facilidade.</p>
+            </div>
+
+            <!-- Cards de Serviços Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Servico 1 -->
+                <div class="bg-dark-800 border border-dark-700 hover:border-gold-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/20 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-dark-900 transition-all">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Corte Masculino</h3>
+                    <p class="text-gray-400 text-sm mb-4">Cortes clássicos e modernos ajustados ao seu formato de rosto e estilo de vida.</p>
+                </div>
+
+                <!-- Servico 2 -->
+                <div class="bg-dark-800 border border-dark-700 hover:border-gold-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/20 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-dark-900 transition-all">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Barba</h3>
+                    <p class="text-gray-400 text-sm mb-4">Modelagem de barba com toalha quente, hidratação profunda e alinhamento impecável.</p>
+                </div>
+
+                <!-- Servico 3 (Destaque) -->
+                <div class="bg-gradient-to-b from-dark-800 to-dark-800/90 border-2 border-gold-500/70 rounded-2xl p-6 transition-all hover:-translate-y-1 relative shadow-xl shadow-gold-950/20">
+                    <span class="absolute -top-3 right-6 bg-gold-500 text-dark-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mais Pedido</span>
+                    <div class="w-14 h-14 rounded-xl bg-gold-500 text-dark-900 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-gold-500/30">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Corte + Barba</h3>
+                    <p class="text-gray-400 text-sm mb-4">O combo completo para renovação total da sua imagem com atendimento VIP.</p>
+                </div>
+
+                <!-- Servico 4 -->
+                <div class="bg-dark-800 border border-dark-700 hover:border-gold-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/20 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-dark-900 transition-all">
+                        <i class="fa-solid fa-child"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Corte Infantil</h3>
+                    <p class="text-gray-400 text-sm mb-4">Atendimento paciente e carinhoso para garantir o visual moderno dos pequenos.</p>
+                </div>
+
+                <!-- Servico 5 -->
+                <div class="bg-dark-800 border border-dark-700 hover:border-gold-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/20 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-dark-900 transition-all">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Sobrancelha</h3>
+                    <p class="text-gray-400 text-sm mb-4">Design e alinhamento de sobrancelhas masculinas para valorizar o olhar.</p>
+                </div>
+
+                <!-- Servico 6 -->
+                <div class="bg-dark-800 border border-dark-700 hover:border-gold-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-xl bg-gold-500/10 border border-gold-500/20 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-dark-900 transition-all">
+                        <i class="fa-solid fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Pigmentação</h3>
+                    <p class="text-gray-400 text-sm mb-4">Técnica para disfarçar falhas, alinhar o pezinho e definir o contorno da barba.</p>
+                </div>
+            </div>
+
+            <!-- Botao Agendamento Direto -->
+            <div class="mt-12 text-center">
+                <a href="https://wa.me/5585999991234?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20servi%C3%A7o%20na%20Barbearia%20Imp%C3%A9rio." target="_blank" class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>AGENDAR SERVIÇO PELO WHATSAPP</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER A BARBEARIA IMPÉRIO -->
+    <section id="diferenciais" class="py-20 bg-dark-800/40 border-b border-dark-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-semibold text-gold-400 uppercase tracking-widest">Diferenciais</h2>
+                <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white">Por que escolher a Barbearia Império?</h3>
+                <div class="w-20 h-1 bg-gold-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-dark-800 border border-dark-700/80 rounded-xl p-5 text-center space-y-3 hover:border-gold-500/30 transition-colors">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-gold-500/10 text-gold-400 flex items-center justify
